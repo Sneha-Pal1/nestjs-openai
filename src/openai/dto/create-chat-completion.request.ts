@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsArray, IsEmpty, IsString, ValidateNested } from 'class-validator';
+import { IsArray, IsNotEmpty, IsString, ValidateNested } from 'class-validator';
 
 export class createChatCompletionRequest {
   @IsArray()
@@ -10,10 +10,10 @@ export class createChatCompletionRequest {
 
 export class ChatCompletionMessageDto {
   @IsString()
-  @IsEmpty()
+  @IsNotEmpty()
   role: string;
 
   @IsString()
-  @IsEmpty()
+  @IsNotEmpty()
   content: string;
 }

@@ -10,7 +10,7 @@ export class OpenaiService {
   async createChatCompletion(messages: ChatCompletionMessageDto[]) {
     return this.openai.chat.completions.create({
       messages: messages as ChatCompletionMessageParam[],
-      model: 'gpt-4',
+      model: 'deepseek/deepseek-r1:free',
     });
   }
 }
